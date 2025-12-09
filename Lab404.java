@@ -5,19 +5,14 @@ public class Lab404 {
         String input = "";
         String text = "";
         String previous = "";
-        int i = 0;
-        int j = 0;
         Scanner scn = new Scanner(System.in);
         while (true){
             System.out.print("Enter word : ");
             input = scn.next();
-            if (i==j) {
-                previous=input;
-                j++;
-            }
-            text = previous.concat(input);
             if(input.equalsIgnoreCase("stop")) break;
+            text += input + " ";
         }
         System.out.print(text);
     }
 }
+
