@@ -6,17 +6,18 @@ public class Lab405 {
 
         System.out.print("Input some sentence : ");
         String input = scn.nextLine();
-        while (input.lastIndexOf('.')<0) {
+
+        while (!input.endsWith(".")) {
             System.out.print("The sentence must end with full stop point : ");
             input = scn.nextLine();
         }
-        System.out.print(" ");
-        if (input.lastIndexOf('.')>0) {
 
-                String cut = input.substring(0, input.indexOf(" "));
-                System.out.println(cut);
-                System.out.println(" ");
+        Scanner wordScan = new Scanner(input);
 
+        System.out.println(" ");
+        while (wordScan.hasNext()) {
+            String word = wordScan.next();
+            System.out.println(word);
         }
     }
 }
