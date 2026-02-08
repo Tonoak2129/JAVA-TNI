@@ -40,9 +40,9 @@ public class CakeOrder {
         System.out.println(" ");
         System.out.println("Total price = " +
                 (
-                (order1.calculatedTotalPrice()) +
-                (order2.calculatedTotalPrice()) +
-                (order3.calculatedTotalPrice())
+                        (order1.calculatedTotalPrice()) +
+                                (order2.calculatedTotalPrice()) +
+                                (order3.calculatedTotalPrice())
                 )
         );
     }
