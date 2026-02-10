@@ -3,12 +3,12 @@ package CoffeeShop;
 public class Espresso extends Drink{
     private int shot = 0;
 
-    public Espresso(String drinkName , double basePrice ,String size,int shot){
+    public Espresso(String drinkName , double basePrice ,String size){
         super(drinkName,basePrice,size);
-        this.shot = shot;
     }
     public void addShot(int shot){
-        shot += 1;
+            this.shot += shot;
+
     }
 
     public int getShot(){
@@ -23,6 +23,6 @@ public class Espresso extends Drink{
     public String toString(){
         return super.toString() + "\n" +
                 ((shot>0)?"Added " + shot + " shot" : "") +
-                "Total price = "  + calculateFinalPrice() + " Baht";
+                "\nTotal price = "  + calculateFinalPrice() + " Baht";
     }
 }
