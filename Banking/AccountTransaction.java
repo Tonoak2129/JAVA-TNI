@@ -1,11 +1,13 @@
 package Banking;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 
-public abstract class AccountTransaction extends BankAccount implements Transactionable {
-    public AccountTransaction(String accId){
+public class AccountTransaction extends BankAccount implements Transactionable {
+    public AccountTransaction(String accId)
+    {
         super(accId);
     }
 
@@ -26,17 +28,17 @@ public abstract class AccountTransaction extends BankAccount implements Transact
         return false;
     }
 
-    public void deposit(double amount){
-        setAccBalance(amount);
+    public void deposit(double amount) throws FileNotFoundException {
+        setAccBalance(getAccBalance() + amount);
     }
 
-    public void withdraw(double amount){
-        if (amount < getAccBalance()) {
-            setAccBalance(getAccBalance()-amount);
+    public void withdraw(double amount) throws IOException {
+        if (amount <= getAccBalance()) {
+            setAccBalance(getAccBalance() - amount);
         }
     }
 
-    public double checkBalance(){
+    public double checkBalance() throws FileNotFoundException {
         return getAccBalance();
     }
 }

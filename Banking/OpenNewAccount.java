@@ -10,15 +10,14 @@ public class OpenNewAccount extends BankAccount{
     }
 
     public String recordAccount() throws IOException {
-        FileWriter filename = new FileWriter(getFilename(),true); //ใส่ true เพื่อให้เขียนต่อท้าย
+        FileWriter filename = new FileWriter(getFilename(),true);
         PrintWriter writer = new PrintWriter(filename);
 
         if (!isExistingAccount(getAccId()))
             {
-                writer.println(getAccId());
-                writer.println(getAccBalance());
+                writer.println(toString());
                 writer.close();
-                return "account has been created!!";
+                return "Created account success!!";
             }
         return "This account has been created!!";
     }
