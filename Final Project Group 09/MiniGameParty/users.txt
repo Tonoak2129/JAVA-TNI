@@ -1,0 +1,4 @@
+username,password,coupon,game1|game2|game3|game4
+admin,inwza,10000000,Rock Paper Scissors|Highlow
+oak,2129,230,Rock Paper Scissors
+test,abc,5000,Rock Paper Scissors|Tic Tac Toe|Hangman|Highlow
